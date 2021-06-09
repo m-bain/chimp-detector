@@ -1,0 +1,28 @@
+## [2.0.2] - not released yet
+ * track multiple objects @todo
+ * jump to a video frame based on user provided time value @todo
+ * when tracking goes wrong, pause video and correct the track and restart tracking from that point (not from the beginning) @todo
+ * tested to run in Windows platform @todo
+
+## [2.0.1] - 13 December 2018
+ * improve the rendering the bounding boxes in user interface (for commonly used 25fps video, use 25 bins to discretise 1 sec)
+ * svt can now run (but is much slower) also on CPU
+ * command line interface to run tracker
+ * python based API interface
+
+## [2.0.0] - 26 November 2018
+ * early release for internal testing
+ * light weight Siamese RPN model (~ 20MB) that adapts to changing aspect ratio of object's bounding boxes
+ * extremely fast tracker but often loses track of object when it is partially occluded or image is crowded with similar objects
+ * basic HTML/CSS/Javasript based user interface to track a single object
+ * requires python3.7+, pytorch, torchvision, opencv
+ * command line version of svt which allows tracking from command line using a task definition JSON file
+
+## [1.0.0] - 14 June 2018
+ * internal software release for Seebibyte Show and Tell 2018 attendees.
+ * extremely robust and fast tracker which can track any object in a video
+ * aspect ratio of bounding box does not adapt to changing shape of object
+ * based on the [cfnet](https://github.com/bertinetto/cfnet) codebase published by Luca Bertinetto and Jack Valmadre
+ * requires Matlab 2016a and matconvnet
+ * basic HTML/CSS/Javascript based user interface
+
