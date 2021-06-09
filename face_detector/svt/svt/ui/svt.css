@@ -1,0 +1,71 @@
+/*
+  Stylesheet for Seebibyte Visual Tracker (SVT)
+
+  Author: Abhishek Dutta <adutta@robots.ox.ac.uk>
+  Date: 7 Nov. 2018
+*/
+
+body { background-color:#e3f2fd; padding:0; margin:0; font-family:sans-serif; }
+* { box-sizing: border-box; }
+
+.top { display:table; margin:0.5rem; padding:0; table-layout:fixed; height:12rem; width:100%; }
+.logo { display:table-cell; text-align:center; width:12rem; color:#000000; border:1px solid #bbdefb; vertical-align:middle; }
+.logo .logo_abbre { display:block; font-size:4rem; }
+.logo .logo_title { display:block; font-size:0.7rem; }
+.logo .logo_ver { display:block; font-size:0.7rem; margin-top:0.2rem; }
+.top .toolbar { display:block; margin-top:1rem; border-top:1px solid #bbdefb; background-color:#bbdefb; }
+.top .toolbar .row { display:block; padding:0.32rem 0; margin:0; }
+.top .toolbar .row svg { fill:#0069c0; padding:0; margin:0 0.5rem; height:1.2rem; -moz-user-select:none; -webkit-user-select:none; -ms-user-select:none; }
+.top .toolbar .row svg:hover { fill:black; cursor:pointer; }
+.top .toolbar .row svg:active { fill:#2196f3; }
+
+.top #object_panel { display:inline-block; vertical-align:top; font-size:0.8rem; margin-left:2rem; border:1px solid #bbdefb; overflow:auto; height:12rem; min-width:50%; max-width:90%; }
+.top #object_panel .title { display:block; margin: 0.3rem; }
+.top #object_panel .title .tools { display:inline-block; float:right; }
+.top #object_panel .title .tools svg {fill:#0069c0; padding:0; margin:0 0.1rem; height:1.2rem;  -moz-user-select:none; -webkit-user-select:none; -ms-user-select:none; }
+.top #object_panel .title .tools svg:hover { fill:black; cursor:pointer; }
+.top #object_panel .title .tools svg:active { fill:#2196f3; }
+
+.top #object_panel .start_info { padding:0.3rem; }
+#object_list { display:table; border-collapse:separate; border-spacing:1rem; }
+#object_list .object { display:table-cell; text-align:center; border-radius:0.3rem; border:1px solid #bbdefb; padding:0.5rem; }
+#object_list .selected { background-color:#bbdefb; }
+#object_list .object .info { display:block; text-align:left; margin:0 0.2rem; }
+#object_list .object .info a { text-decoration:none; }
+#object_list .object .info .otool { float:right; }
+#object_list .object canvas { display:block; height:5rem; margin:auto; padding:0.2rem 0;}
+#object_list .object table { table-layout:auto; width:14rem; border-collapse:collapse; border:1px solid #2196f3; font-size:0.7rem; }
+
+#object_list .object th, td { padding:0.1rem 0.2rem; border:1px solid #2196f2; }
+
+.page { display:none; margin:1rem 0.5rem; }
+.page .text_content { width:50rem; }
+
+.about_page { padding:2rem 1rem; width:45rem; border:1px solid #2196f2; }
+.about_page .title { display:block; font-size:2.6rem; }
+.about_page .version { display:block; font-size:0.8rem; }
+.about_page p { width:40rem; }
+
+.show { display:block; }
+.hide { display:none; }
+
+.text_button { color: blue; padding: 0.2rem 0.2rem; -moz-user-select:none; -webkit-user-select:none; -ms-user-select:none; }
+.text_button:hover { cursor:pointer;}
+.text_button:active { color:red; }
+
+/*
+  you must define the content area's dimension
+  IMPORTANT: "position" attribute of div style *must be* "relative"
+*/
+#annotation_viewer .via_content { position: relative; display: block; height: 70vh; }
+#annotation_viewer .via_content .video_play_mode { border:none; }
+#annotation_viewer .via_content .video_annotation_mode { border:1px solid black; }
+
+#annotation_viewer #video_toolbar { display:block; text-align:left; padding:0.1rem 0; font-size:0.8rem; }
+#annotation_viewer #video_toolbar button { font-size:0.8rem; }
+#annotation_viewer #video_toolbar select { font-size:0.8rem; }
+#annotation_viewer #video_toolbar input { font-size:0.8rem; }
+
+/* message panel (at bottom) */
+#message_panel_container { display:block; width:100%; position:fixed; bottom:0px; z-index:9999; text-align:center; }
+#message_panel { margin:auto; background-color:#000000; color:#ffff00; font-size:0.8em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:2rem; padding: 0.5rem 2rem;}
