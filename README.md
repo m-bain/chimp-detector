@@ -1,4 +1,4 @@
-# Chimpanzee Body Detector
+# Chimpanzee Detector
 
 `python3 process_vid.py --input_video {path_to_video} --detect [face/body]`
 
